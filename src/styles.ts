@@ -1,8 +1,10 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-import emotionReset from "emotion-reset";
+import { css } from '@emotion/react';
+import emotionReset from 'emotion-reset';
 
-import bg from "./assets/images/bg.webp";
+import bg from 'assets/images/bg.webp';
+
+import { colors } from 'common/consts/colors';
 
 export const globalStyles = css`
   ${emotionReset}
@@ -14,7 +16,8 @@ export const globalStyles = css`
   }
 
   :root {
-    --background: #fff;
+    --background: ${colors.white};
+    --primary: ${colors.gold};
   }
 
   html {
@@ -27,9 +30,9 @@ export const globalStyles = css`
     -moz-osx-font-smoothing: grayscale;
 
     background: var(--background) url(${bg}) center / cover no-repeat fixed;
-    font-family: "Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-      "Helvetica Neue", sans-serif;
+    font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+      'Helvetica Neue', sans-serif;
     margin: 0;
   }
 `;

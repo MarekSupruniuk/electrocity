@@ -1,38 +1,40 @@
-import React, { useRef, useEffect, useState } from "react";
-import mapboxgl from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import React, { useRef, useEffect } from 'react';
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import mapboxgl from '!mapbox-gl';
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoibWFyZWtzdXBydW5pdWsiLCJhIjoiY2wwZTg0bHdoMGdraTNpazZ1OWV6aDFtcSJ9.qennylecHxSpfRXjGFbdNg";
+import { colors } from 'common/consts/colors';
+import { layout } from 'common/consts/layout';
+import { map } from 'common/consts/map';
+
+mapboxgl.accessToken = map.key;
 
 export const Map = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<any>(null); // fix type
-  const [lng, setLng] = useState(23.332807);
-  const [lat, setLat] = useState(53.0174394);
-  const [zoom, setZoom] = useState(9);
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+  const mapInstanceRef = useRef<any>(null); // fix type
 
   useEffect(() => {
-    if (map.current || !mapContainer.current) return;
+    if (mapInstanceRef.current || !mapContainerRef.current) return;
 
     const mapInstance = new mapboxgl.Map({
-      container: mapContainer.current,
+      container: mapContainerRef.current,
       style: 'mapbox://styles/mapbox/light-v10',
-      center: [lng, lat],
-      zoom: zoom,
+      center: [map.lng, map.lat],
+      zoom: map.zoom,
     });
 
     new mapboxgl.Marker({
-      color: '#ff0000'
+      color: colors.navy,
     })
-      .setLngLat([lng, lat])
+      .setLngLat([map.lng, map.lat])
       .addTo(mapInstance);
 
-    map.current = mapInstance;
-  }, [lng, lat, zoom]);
+    mapInstanceRef.current = mapInstance;
+  }, []);
 
   return (
     <div>
-      <div ref={mapContainer} style={{ height: 400 }} />
+      <div ref={mapContainerRef} style={{ height: layout.desktop.mapHeight }} />
     </div>
   );
 };

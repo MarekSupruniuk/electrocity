@@ -1,10 +1,8 @@
 import { Global } from '@emotion/react';
 
-import logo from './common/svgs/logo.svg';
-
-import { globalStyles } from './styles';
-
-import { Home } from './pages/Home/Home';
+import { globalStyles } from 'styles';
+import logo from 'common/svgs/logo.svg';
+import { Home } from 'pages/Home/Home';
 
 function App() {
   return (

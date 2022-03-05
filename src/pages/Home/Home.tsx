@@ -1,4 +1,4 @@
-import { Map } from './Map/Map';
+import { Map } from 'pages/Home/Map/Map';
 
 export const Home = () => {
   return (
