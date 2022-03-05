@@ -12,6 +12,8 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "emotion-reset": "^3.0.1",
+    "mapbox-gl": "^2.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
@@ -56,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@types/mapbox-gl": "^2.6.3",
     "react-snap": "^1.23.0"
   }
 }

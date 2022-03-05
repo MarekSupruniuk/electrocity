@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "ELECTRO CITY",
+  "name": "ELECTRO CITY | Profesjonalne wykonawstwo połączone z kompetentną obsługą inżynierską",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#B9933C",
+  "background_color": "#0A2B3B"
 }

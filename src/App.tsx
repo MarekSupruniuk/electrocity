@@ -1,28 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Global } from '@emotion/react';
 
-import { Text } from './styles';
+import logo from './common/svgs/logo.svg';
+
+import { globalStyles } from './styles';
+
+import { Home } from './pages/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Text>test of styled component</Text>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Global styles={globalStyles} />
+      <div className='App'>
+        <header className='App-header'>
+          <img src={logo} className='App-logo' alt='logo' />
+          <Home />
+        </header>
+      </div>
+    </>
   );
 }
 
