@@ -18,7 +18,7 @@ export const Map = () => {
 
     const mapInstance = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: 'mapbox://styles/mapbox/light-v10',
+      style: map.style,
       center: [map.lng, map.lat],
       zoom: map.zoom,
     });

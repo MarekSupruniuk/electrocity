@@ -43,6 +43,23 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.ts?(x)"
+        ],
+        "rules": {
+          "quotes": [
+            1,
+            "single",
+            "avoid-escape"
+          ]
+        },
+        "plugins": [
+          "prettier"
+        ]
+      }
     ]
   },
   "browserslist": {
@@ -59,6 +76,13 @@
   },
   "devDependencies": {
     "@types/mapbox-gl": "^2.6.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
     "react-snap": "^1.23.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
   }
 }
