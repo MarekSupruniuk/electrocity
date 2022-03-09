@@ -18,12 +18,15 @@ export const globalStyles = css`
 
   :root {
     --color-background: ${colors.white};
+    --color-gray: ${colors.gray};
+    --color-light-gray: ${colors.lightGray};
     --color-primary: ${colors.gold};
     --color-secondary: ${colors.navy};
 
     --font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI',
       'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
       'Helvetica Neue', sans-serif;
+    --font-alternative: 400 normal 16px/1 var(--font-family);
     --font-default: 300 normal 20px/1.6 var(--font-family);
     --font-header: 400 normal 36px/1.6 var(--font-family);
 
@@ -41,10 +44,9 @@ export const globalStyles = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background: var(--color-background) url(${bg}) center / cover no-repeat fixed;
-    font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    background: var(--color-background, #fff) url(${bg}) center / cover no-repeat fixed;
+    color: var(--color-secondary, #000);
+    font: var(--font-default);
     margin: 0;
   }
 `;

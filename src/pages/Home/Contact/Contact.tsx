@@ -1,22 +1,25 @@
-// import { Wrapper } from './footer.styles';
+import { Abbr, Header, Inner, List, ListItem, Wrapper } from './contact.styles';
 
 export const Contact = () => (
-  <section>
-    <h2>Kontakt</h2>
-    <ul>
-      <li>Szkolna 9, 16-060 Zabłudów, Polska</li>
-      <li>
-        <span>KRS</span>
-        0000869428
-      </li>
-      <li>
-        <span>NIP</span>
-        9662144866
-      </li>
-      <li>
-        <span>REGON</span>
-        387509442
-      </li>
-    </ul>
-  </section>
+  <Wrapper>
+    <Inner>
+      <Header>Kontakt</Header>
+
+      <List>
+        <ListItem>Szkolna 9, 16-060 Zabłudów, Polska</ListItem>
+        <ListItem>
+          <Abbr>KRS</Abbr>
+          0000869428
+        </ListItem>
+        <ListItem>
+          <Abbr>NIP</Abbr>
+          9662144866
+        </ListItem>
+        <ListItem>
+          <Abbr>REGON</Abbr>
+          387509442
+        </ListItem>
+      </List>
+    </Inner>
+  </Wrapper>
 );

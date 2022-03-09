@@ -1,5 +1,9 @@
+import { Header, Inner, Wrapper } from './partners.styles';
+
 export const Partners = () => (
-  <section>
-    <h2>Partnerzy</h2>
-  </section>
+  <Wrapper>
+    <Inner>
+      <Header>Partnerzy</Header>
+    </Inner>
+  </Wrapper>
 );

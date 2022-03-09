@@ -1,19 +1,25 @@
 import { NavLinks, Sections, SectionType } from 'common/consts/links';
-import {} from 'common/consts/links';
-import logo from 'common/svgs/logo.svg';
+import { ReactComponent as Logo } from 'common/svgs/logo.svg';
 
-import { Wrapper } from './header.styles';
+import { Inner, Link, LogoWrapper, Wrapper } from './header.styles';
 
-export const Header = () => (
-  <Wrapper id={Sections[SectionType.HOME]!.id}>
-    <h1>
-      <img src={logo} className="App-logo" alt="logo" />
-      Electro City
-    </h1>
-    {NavLinks.map((link) => (
-      <a key={link.id} href={`#${link.id}`}>
-        {link.label}
-      </a>
-    ))}
+type Props = {
+  hasBackground: boolean;
+};
+export const Header = ({ hasBackground }: Props) => (
+  <Wrapper hasBackground={hasBackground} id={Sections[SectionType.HOME].id}>
+    <Inner>
+      <LogoWrapper>
+        <a href={`#${Sections[SectionType.HOME].id}`}>
+          <Logo title={Sections[SectionType.HOME].label} />
+        </a>
+      </LogoWrapper>
+
+      {NavLinks.map((link) => (
+        <Link key={link.id} href={`#${link.id}`}>
+          {link.label}
+        </Link>
+      ))}
+    </Inner>
   </Wrapper>
 );

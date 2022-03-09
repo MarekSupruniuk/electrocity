@@ -10,12 +10,16 @@ import { Offer } from './Offer/Offer';
 import { Map } from 'pages/Home/Map/Map';
 import { Partners } from './Partners/Partners';
 
-import { Section } from './home.styles';
+import { useNavAdjuster } from './home.hooks';
+import { ScrollToTop, Section } from './home.styles';
 
 export const Home = () => {
+  const { isScrolled, setObserverRef } = useNavAdjuster();
+
   return (
     <>
-      <Header />
+      <div ref={setObserverRef} />
+      <Header hasBackground={isScrolled} />
       <Section id={Sections[SectionType.HERO].id}>
         <Hero />
       </Section>
@@ -35,7 +39,9 @@ export const Home = () => {
         <Contact />
       </Section>
       <Footer />
-      <TopArrow />
+      <ScrollToTop isVisible={isScrolled}>
+        <TopArrow />
+      </ScrollToTop>
     </>
   );
 };

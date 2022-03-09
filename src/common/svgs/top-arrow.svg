@@ -1,11 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="47" viewBox="0 0 47 47">
-  <defs>
-    <clipPath id="clip-path">
-      <rect width="47" height="47" transform="translate(0 0)" fill="none"/>
-    </clipPath>
-  </defs>
-  <g itransform="translate(0 0)" clip-path="url(#clip-path)">
+
     <ellipse cx="22.491" cy="22.491" rx="22.491" ry="22.491" transform="translate(1.009 1.009)" fill="none" stroke="#af7f2a" stroke-miterlimit="10" stroke-width="2.018"/>
     <path d="M34.046,28.639,23.5,19.214,12.953,28.639" fill="none" stroke="#af7f2a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.018"/>
-  </g>
+
 </svg>

@@ -1,14 +1,17 @@
 import { NavLinks } from 'common/consts/links';
 
-import { Wrapper } from './footer.styles';
+import { Copyright, Inner, Link, Wrapper } from './footer.styles';
 
 export const Footer = () => (
   <Wrapper>
-    {NavLinks.map((link) => (
-      <a key={link.id} href={`#${link.id}`}>
-        {link.label}
-      </a>
-    ))}
-    <p>copyright &copy; 2022</p>
+    <Inner>
+      {NavLinks.map((link) => (
+        <Link key={link.id} href={`#${link.id}`}>
+          {link.label}
+        </Link>
+      ))}
+
+      <Copyright>Copyright &copy; 2022</Copyright>
+    </Inner>
   </Wrapper>
 );
