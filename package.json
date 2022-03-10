@@ -84,5 +84,8 @@
     "singleQuote": true,
     "trailingComma": "all",
     "arrowParens": "always"
+  },
+  "reactSnap": {
+    "inlineCss": true
   }
 }

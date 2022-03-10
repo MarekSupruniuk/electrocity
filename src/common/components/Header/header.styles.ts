@@ -5,12 +5,13 @@ type Props = {
 };
 export const Wrapper = styled.nav<Props>`
   background-color: ${({ hasBackground }) =>
-    hasBackground ? 'var(--color-background)' : 'transparent'};
+    hasBackground ? 'var(--color-white-overlay)' : 'transparent'};
   font: var(--font-alternative);
   position: fixed;
   top: 0;
   transition: background-color .5s ease;
   width: 100%;
+  z-index: 100;
 `;
 
 export const Inner = styled.div`

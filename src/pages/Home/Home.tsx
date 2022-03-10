@@ -18,7 +18,7 @@ export const Home = () => {
 
   return (
     <>
-      <div ref={setObserverRef} />
+      <div ref={setObserverRef} id={Sections[SectionType.HOME].id} />
       <Header hasBackground={isScrolled} />
       <Section id={Sections[SectionType.HERO].id}>
         <Hero />

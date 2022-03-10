@@ -7,7 +7,7 @@ type Props = {
   hasBackground: boolean;
 };
 export const Header = ({ hasBackground }: Props) => (
-  <Wrapper hasBackground={hasBackground} id={Sections[SectionType.HOME].id}>
+  <Wrapper hasBackground={hasBackground}>
     <Inner>
       <LogoWrapper>
         <a href={`#${Sections[SectionType.HOME].id}`}>

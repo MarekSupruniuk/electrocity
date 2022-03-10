@@ -4,4 +4,5 @@ export const colors = {
   lightGray: '#ECF1F4',
   navy: '#0A2B3B',
   white: '#fff',
+  whiteOverlay: '#ffffffe6',
 }

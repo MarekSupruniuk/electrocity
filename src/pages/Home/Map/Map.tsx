@@ -1,40 +1,17 @@
-import React, { useRef, useEffect } from 'react';
-// @ts-ignore
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import mapboxgl from '!mapbox-gl';
+import { lazy, Suspense } from 'react';
 
-import { colors } from 'common/consts/colors';
-import { layout } from 'common/consts/layout';
-import { map } from 'common/consts/map';
-
-mapboxgl.accessToken = map.key;
+import { Wrapper } from './map.styles';
+const Mapbox = lazy(() => import('./Mapbox'));
+const isPrerendering = navigator.userAgent === 'ReactSnap';
 
 export const Map = () => {
-  const mapContainerRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<any>(null); // fix type
-
-  useEffect(() => {
-    if (mapInstanceRef.current || !mapContainerRef.current) return;
-
-    const mapInstance = new mapboxgl.Map({
-      container: mapContainerRef.current,
-      style: map.style,
-      center: [map.lng, map.lat],
-      zoom: map.zoom,
-    });
-
-    new mapboxgl.Marker({
-      color: colors.navy,
-    })
-      .setLngLat([map.lng, map.lat])
-      .addTo(mapInstance);
-
-    mapInstanceRef.current = mapInstance;
-  }, []);
-
   return (
-    <div>
-      <div ref={mapContainerRef} style={{ height: layout.desktop.mapHeight }} />
-    </div>
+    !isPrerendering ? (
+      <Wrapper>
+        <Suspense fallback={<div>wczytywnie mapy...</div>}>
+          <Mapbox />
+        </Suspense>
+      </Wrapper>
+    ) : <div>loading...</div>
   );
 };

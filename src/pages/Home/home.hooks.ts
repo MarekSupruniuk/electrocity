@@ -13,7 +13,9 @@ export const useNavAdjuster = () => {
 
       setIsScrolled(!lastEntry.isIntersecting);
     };
-    const intersectionObserver = new IntersectionObserver(eventHandler);
+    const intersectionObserver = new IntersectionObserver(eventHandler, {
+      rootMargin: '115px 0px'
+    });
     intersectionObserver.observe(observerRef);
 
     return () => intersectionObserver.disconnect();

@@ -18,6 +18,7 @@ export const globalStyles = css`
 
   :root {
     --color-background: ${colors.white};
+    --color-white-overlay: ${colors.whiteOverlay};
     --color-gray: ${colors.gray};
     --color-light-gray: ${colors.lightGray};
     --color-primary: ${colors.gold};
@@ -32,6 +33,7 @@ export const globalStyles = css`
 
     --layout-footer-height: ${layout.desktop.footerHeight}px;
     --layout-hero-height: ${layout.desktop.heroHeight}px;
+    --layout-map-height: ${layout.desktop.mapHeight}px;
     --layout-width: ${layout.desktop.layoutWidth}px;
   }
 

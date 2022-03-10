@@ -7,6 +7,6 @@ export const Wrapper = styled.header`
   height: var(--layout-hero-height);
 
   * {
-    opacity: 0;
+    display: none;
   }
 `;
