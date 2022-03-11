@@ -1,28 +1,8 @@
 import styled from '@emotion/styled';
-import headerIcon from 'common/svgs/header.svg';
+import bg from 'assets/images/bg.webp';
 
-export const Wrapper = styled.section``;
-
-export const Inner = styled.div`
-  margin: 0 auto;
-  max-width: var(--layout-width);
-  padding: 120px 30px;
-  text-align: center;
-`;
-
-export const Header = styled.h2`
-  font: var(--font-header);
-  margin-bottom: 70px;
-  text-transform: uppercase;
-
-  ::before {
-    content: '';
-    background: url(${headerIcon}) center no-repeat;
-    display: inline-block;
-    height: 26px;
-    margin-right: 30px;
-    width: 20px;
-  }
+export const Wrapper = styled.section`
+  background: url(${bg}) 0 50% / cover no-repeat fixed;
 `;
 
 export const Description = styled.p``;
@@ -38,10 +18,20 @@ export const ListItem = styled.li`
   display: flex;
   flex-flow: column nowrap;
   margin-top: 130px;
-  width: 300px;
+  max-width: 300px;
 
   svg {
     display: block;
     margin-bottom: 70px;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 40px;
+
+    svg {
+      height: 76px;
+      margin-bottom: 30px;
+      width: 76px;
+    }
   }
 `;

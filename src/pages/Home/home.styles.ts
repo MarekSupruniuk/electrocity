@@ -12,4 +12,9 @@ export const ScrollToTop = styled.div<Props>`
   right: 100px;
   pointer-events: ${({ isVisible }) => (isVisible ? 'auto' : 'none')};
   transition: opacity 1s ease;
+  z-index: 50;
+  
+  @media (max-width: 600px) {
+   display: none;
+  }
 `;

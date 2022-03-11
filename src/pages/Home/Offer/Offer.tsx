@@ -1,3 +1,6 @@
+import { Container } from 'common/components/Container/Container';
+import { Title } from 'common/components/Title/Title';
+
 import { ReactComponent as OfferSvg0 } from 'common/svgs/offer-0.svg';
 import { ReactComponent as OfferSvg1 } from 'common/svgs/offer-1.svg';
 import { ReactComponent as OfferSvg2 } from 'common/svgs/offer-2.svg';
@@ -6,19 +9,13 @@ import { ReactComponent as OfferSvg4 } from 'common/svgs/offer-4.svg';
 import { ReactComponent as OfferSvg5 } from 'common/svgs/offer-5.svg';
 import { ReactComponent as OfferSvg6 } from 'common/svgs/offer-6.svg';
 
-import {
-  Description,
-  Header,
-  Inner,
-  List,
-  ListItem,
-  Wrapper,
-} from './offer.styles';
+import { Description, List, ListItem, Wrapper } from './offer.styles';
 
 export const Offer = () => (
   <Wrapper>
-    <Inner>
-      <Header>Oferta</Header>
+    <Container>
+      <Title alternative>Oferta</Title>
+
       <Description>W zakresie naszych usług znajdują się:</Description>
 
       <List>
@@ -55,6 +52,6 @@ export const Offer = () => (
           sieci w oparciu o między innymi regulacje Nc RfG oraz NC DC
         </ListItem>
       </List>
-    </Inner>
+    </Container>
   </Wrapper>
 );

@@ -18,15 +18,28 @@ export const Inner = styled.div`
   align-items: center;
   display: flex;
   gap: 80px;
-  height: var(--layout-footer-height);
   justify-content: flex-end;
   margin: 0 auto;
   max-width: 1780px;
-  padding: 0 30px;
+  padding: 25px 35px;
+
+  @media (max-width: 600px) {
+    padding: 20px 35px;
+  }
 `;
 
 export const LogoWrapper = styled.h1`
+  height: 73px;
   margin-right: auto;
+
+  @media (max-width: 600px) {
+    height: 47px;
+    margin: auto;
+  }
+
+  svg {
+    height: 100%;
+  }
 `;
 
 export const Link = styled.a`
@@ -37,5 +50,9 @@ export const Link = styled.a`
 
   :hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
   }
 `;

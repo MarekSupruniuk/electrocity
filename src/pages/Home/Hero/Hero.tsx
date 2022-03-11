@@ -4,7 +4,11 @@ export const Hero = () => (
   <Wrapper>
     <Inner>
       <Title>Profesjonalne wykonawstwo</Title>
-      <Subtitle>połączone z kompetentną obsługą inżynierską</Subtitle>
+      <Subtitle>
+        połączone z kompetentną
+        <br />
+        obsługą inżynierską
+      </Subtitle>
     </Inner>
   </Wrapper>
 );

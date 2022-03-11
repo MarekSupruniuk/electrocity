@@ -1,9 +1,12 @@
-import { Abbr, Header, Inner, List, ListItem, Wrapper } from './contact.styles';
+import { Container } from 'common/components/Container/Container';
+import { Title } from 'common/components/Title/Title';
+
+import { Abbr, List, ListItem, Wrapper } from './contact.styles';
 
 export const Contact = () => (
   <Wrapper>
-    <Inner>
-      <Header>Kontakt</Header>
+    <Container>
+      <Title alternative>Kontakt</Title>
 
       <List>
         <ListItem>Szkolna 9, 16-060 Zabłudów, Polska</ListItem>
@@ -20,6 +23,6 @@ export const Contact = () => (
           387509442
         </ListItem>
       </List>
-    </Inner>
+    </Container>
   </Wrapper>
 );

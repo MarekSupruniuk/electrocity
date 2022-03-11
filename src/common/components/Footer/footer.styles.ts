@@ -9,10 +9,13 @@ export const Inner = styled.div`
   align-items: center;
   display: flex;
   gap: 40px;
-  height: var(--layout-footer-height);
   margin: 0 auto;
   max-width: var(--layout-width);
-  padding: 0 20px;
+  padding: 50px 35px;
+
+  @media (max-width: 600px) {
+    padding: 20px 35px;
+  }
 `;
 
 export const Link = styled.a`
@@ -24,9 +27,17 @@ export const Link = styled.a`
   :hover {
     text-decoration: underline;
   }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Copyright = styled.p`
   color: var(--color-gray);
   margin-left: auto;
+
+  @media (max-width: 600px) {
+    margin: auto;
+  }
 `;

@@ -1,9 +1,12 @@
-import { Header, Inner, Wrapper } from './partners.styles';
+import { Container } from 'common/components/Container/Container';
+import { Title } from 'common/components/Title/Title';
+
+import { Wrapper } from './partners.styles';
 
 export const Partners = () => (
   <Wrapper>
-    <Inner>
-      <Header>Partnerzy</Header>
-    </Inner>
+    <Container>
+      <Title>Partnerzy</Title>
+    </Container>
   </Wrapper>
 );

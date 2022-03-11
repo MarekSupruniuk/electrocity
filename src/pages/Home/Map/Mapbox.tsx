@@ -4,8 +4,9 @@ import { useRef, useEffect } from 'react';
 import mapboxgl from '!mapbox-gl';
 
 import { colors } from 'common/consts/colors';
-import { layout } from 'common/consts/layout';
 import { map } from 'common/consts/map';
+
+import { MapContainer } from './map.styles';
 
 mapboxgl.accessToken = map.key;
 
@@ -32,7 +33,7 @@ export const Mapbox = () => {
     mapInstanceRef.current = mapInstance;
   }, []);
 
-  return (<div ref={mapContainerRef} style={{ height: layout.desktop.mapHeight }} />);
+  return (<MapContainer ref={mapContainerRef} />);
 };
 
 export default Mapbox;

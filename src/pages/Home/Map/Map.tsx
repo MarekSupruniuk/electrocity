@@ -1,17 +1,20 @@
 import { lazy, Suspense } from 'react';
 
 import { Wrapper } from './map.styles';
+
 const Mapbox = lazy(() => import('./Mapbox'));
 const isPrerendering = navigator.userAgent === 'ReactSnap';
 
 export const Map = () => {
   return (
-    !isPrerendering ? (
-      <Wrapper>
+    <Wrapper>
+      {!isPrerendering ? (
         <Suspense fallback={<div>wczytywnie mapy...</div>}>
           <Mapbox />
         </Suspense>
-      </Wrapper>
-    ) : <div>loading...</div>
+      ) : (
+        <div>loading...</div>
+      )}
+    </Wrapper>
   );
 };

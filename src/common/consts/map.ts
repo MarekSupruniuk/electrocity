@@ -3,5 +3,5 @@ export const map = {
   lat: 53.01738284859738,
   lng: 23.335094775982526,
   style: 'mapbox://styles/mapbox/light-v10?optimize=true',
-  zoom: 10,
+  zoom: 11,
 };

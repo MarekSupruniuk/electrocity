@@ -1,9 +1,12 @@
-import { Description, Header, Inner, Wrapper } from './aboutUs.styles';
+import { Container } from 'common/components/Container/Container';
+import { Title } from 'common/components/Title/Title';
+
+import { Description, Wrapper } from './aboutUs.styles';
 
 export const AboutUs = () => (
   <Wrapper>
-    <Inner>
-      <Header>O nas</Header>
+    <Container>
+      <Title>O nas</Title>
 
       <Description>
         Electro City Sp. z o.o. to firma, której obszarem działania jest budowa
@@ -16,6 +19,6 @@ export const AboutUs = () => (
         inwestorami orazilość realizowanych projektów potwierdzają nasz
         profesjonalizm oraz jakość wykonywanych usług.
       </Description>
-    </Inner>
+    </Container>
   </Wrapper>
 );
