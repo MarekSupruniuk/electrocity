@@ -6,7 +6,7 @@ export const Wrapper = styled.section``;
 export const Inner = styled.div`
   margin: 0 auto;
   max-width: var(--layout-width);
-  padding: 120px 20px;
+  padding: 120px 30px;
   text-align: center;
 `;
 
@@ -38,7 +38,7 @@ export const ListItem = styled.li`
   display: flex;
   flex-flow: column nowrap;
   margin-top: 130px;
-  width: 260px;
+  width: 300px;
 
   svg {
     display: block;

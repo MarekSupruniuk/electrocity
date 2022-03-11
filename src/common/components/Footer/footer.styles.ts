@@ -17,6 +17,7 @@ export const Inner = styled.div`
 
 export const Link = styled.a`
   color: var(--color-primary);
+  font-weight: normal;
   text-decoration: none;
   text-transform: uppercase;
 

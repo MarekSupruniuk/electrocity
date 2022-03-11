@@ -35,6 +35,15 @@ export const globalStyles = css`
     --layout-hero-height: ${layout.desktop.heroHeight}px;
     --layout-map-height: ${layout.desktop.mapHeight}px;
     --layout-width: ${layout.desktop.layoutWidth}px;
+
+    @media (max-width: 420px) {
+      --font-alternative: 400 normal 16px/1 var(--font-family);
+      --font-default: 300 normal 14px/1.6 var(--font-family);
+      --font-header: 400 normal 26px/1.6 var(--font-family);
+
+      --layout-hero-height: ${layout.mobile.heroHeight}px;
+      --layout-map-height: ${layout.mobile.mapHeight}px;
+    }
   }
 
   html {
@@ -46,7 +55,8 @@ export const globalStyles = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background: var(--color-background, #fff) url(${bg}) center / cover no-repeat fixed;
+    background: var(--color-background, #fff) url(${bg}) center / cover
+      no-repeat fixed;
     color: var(--color-secondary, #000);
     font: var(--font-default);
     margin: 0;

@@ -11,5 +11,5 @@ export const ScrollToTop = styled.div<Props>`
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
   right: 100px;
   pointer-events: ${({ isVisible }) => (isVisible ? 'auto' : 'none')};
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
 `;

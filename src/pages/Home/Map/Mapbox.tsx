@@ -24,7 +24,7 @@ export const Mapbox = () => {
     });
 
     new mapboxgl.Marker({
-      color: colors.navy,
+      color: colors.gold,
     })
       .setLngLat([map.lng, map.lat])
       .addTo(mapInstance);

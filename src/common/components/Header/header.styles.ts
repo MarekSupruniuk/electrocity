@@ -9,7 +9,7 @@ export const Wrapper = styled.nav<Props>`
   font: var(--font-alternative);
   position: fixed;
   top: 0;
-  transition: background-color .5s ease;
+  transition: background-color 1s ease;
   width: 100%;
   z-index: 100;
 `;
@@ -18,10 +18,11 @@ export const Inner = styled.div`
   align-items: center;
   display: flex;
   gap: 80px;
+  height: var(--layout-footer-height);
   justify-content: flex-end;
   margin: 0 auto;
-  max-width: 1720px;
-  padding: 20px 100px;
+  max-width: 1780px;
+  padding: 0 30px;
 `;
 
 export const LogoWrapper = styled.h1`
@@ -30,6 +31,7 @@ export const LogoWrapper = styled.h1`
 
 export const Link = styled.a`
   color: var(--color-primary);
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
 

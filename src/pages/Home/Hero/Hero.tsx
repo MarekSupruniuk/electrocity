@@ -1,8 +1,10 @@
-import { Wrapper } from './hero.styles';
+import { Inner, Subtitle, Title, Wrapper } from './hero.styles';
 
 export const Hero = () => (
   <Wrapper>
-    <h2>Profesjonalne wykonawstwo</h2>
-    <p>połączone z kompetentną obsługą inżynierską</p>
+    <Inner>
+      <Title>Profesjonalne wykonawstwo</Title>
+      <Subtitle>połączone z kompetentną obsługą inżynierską</Subtitle>
+    </Inner>
   </Wrapper>
 );
